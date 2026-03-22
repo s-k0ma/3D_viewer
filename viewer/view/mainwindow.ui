@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>627</width>
+                <height>707</height>
+            </rect>
+        </property>
+        <property name="sizeIncrement">
+            <size>
+                <width>10</width>
+                <height>10</height>
+            </size>
+        </property>
+        <property name="windowTitle">
+            <string>MainWindow</string>
+        </property>
+        <property name="styleSheet">
+            <string notr="true">QMainWindow{
+                background-color:rgb(225, 203, 163);
+                }
+
+                QPushButton{
+                font: 700 24pt ;
+                color: rgb(65, 81, 99);
+                display: inline-block;
+                background-color:rgb(213, 229, 228);
+                border: 3px solid rgb(65, 81, 99);
+                border-radius: 10px;
+                cursor: pointer;
+                }
+                QPushButton:hover{
+                background-color:rgb(173, 185, 198);
+                }
+            </string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QGridLayout" name="gridLayout">
+                <item row="0" column="1" rowspan="4">
+                    <widget class="QWidget" name="MenuRight" native="true">
+                        <property name="sizePolicy">
+                            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">QWidget{
+                                background-color: rgb(210, 191, 158);
+                                border-radius: 3px;
+                                }
+                                QPushButton{
+                                font: 700 17pt ;
+                                color: rgb(65, 81, 99);
+                                display: inline-block;
+                                background-color:rgb(213, 229, 228);
+                                border: 3px solid rgb(65, 81, 99);
+                                border-radius: 10px;
+                                cursor: pointer;
+                                }
+                                QPushButton:hover{
+                                background-color:rgb(173, 185, 198);
+                                }
+
+                                QLabel{
+                                font: 700 18pt ;
+                                color:rgb(64, 80, 98);
+                                background-color:rgb(164, 151, 132);
+                                border: 1px solid rgb(65, 81, 99);
+                                border-radius: 2px;
+                                }
+
+                                QDoubleSpinBox{
+                                color:rgb(66, 82, 100);
+                                border: 1px solid rgb(65, 81, 99);
+                                background-color:rgb(243, 220, 178);
+                                }
+
+                                QRadioButton::indicator {
+                                width: 13px;
+                                height: 13px;
+                                border-radius: 6px;
+                                }
+
+                                QRadioButton::indicator::unchecked {
+                                background-color: rgb(213, 229, 228);
+                                }
+
+                                QRadioButton::indicator:unchecked:hover {
+                                background-color: rgb(123, 155, 191);
+                                }
+
+                                QRadioButton::indicator::checked {
+                                background-color: rgb(65, 81, 99);
+                                }
+
+                                QSlider::groove:horizontal {
+                                border: 1px solid #999999;
+                                height: 8px;
+                                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+                                margin: 2px 0;
+                                }
+
+                                QSlider::handle:horizontal {
+                                background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+                                border: 1px solid #5c5c5c;
+                                width: 18px;
+                                margin: -2px 0;
+                                border-radius: 3px;
+                                }
+                                QSlider::handle:horizontal:hover {
+                                background: rgb(101, 127, 156);
+                                }
+
+                                QSlider::groove:vertical {
+                                border: 1px solid #999999;
+                                width: 8px;
+                                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+                                margin: 2px 0;
+                                }
+
+                                QSlider::handle:vertical {
+                                background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+                                border: 1px solid #5c5c5c;
+                                height: 18px;
+                                margin: 0px -2px;
+                                border-radius: 3px;
+                                }
+
+                                QSlider::handle:vertical:hover {
+                                background: rgb(101, 127, 156);
+                                }
+                            </string>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_4">
+                            <item>
+                                <widget class="QLabel" name="LabelRotation">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>ROTATION</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QWidget" name="AllRotation" native="true">
+                                    <layout class="QGridLayout" name="gridLayout_2">
+                                        <item row="1" column="0" rowspan="2" colspan="2">
+                                            <widget class="QSlider" name="RotationY">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>0</width>
+                                                        <height>25</height>
+                                                    </size>
+                                                </property>
+                                                <property name="orientation">
+                                                    <enum>Qt::Orientation::Horizontal</enum>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item row="0" column="0">
+                                            <widget class="QSlider" name="RotationZ">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>21</width>
+                                                        <height>0</height>
+                                                    </size>
+                                                </property>
+                                                <property name="orientation">
+                                                    <enum>Qt::Orientation::Vertical</enum>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item row="0" column="1">
+                                            <widget class="QDial" name="RotationX">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                    <zorder>RotationX</zorder>
+                                    <zorder>RotationY</zorder>
+                                    <zorder>RotationZ</zorder>
+                                </widget>
+                            </item>
+                            <item>
+                                <spacer name="verticalSpacer">
+                                    <property name="orientation">
+                                        <enum>Qt::Orientation::Vertical</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                        <size>
+                                            <width>20</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </item>
+                            <item>
+                                <widget class="QLabel" name="LabelMoving">
+                                    <property name="text">
+                                        <string>MOVING</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item>
+                                <layout class="QVBoxLayout" name="MovingXYZ">
+                                    <item>
+                                        <layout class="QHBoxLayout" name="MovingX">
+                                            <item>
+                                                <widget class="QLabel" name="LabelX">
+                                                    <property name="sizePolicy">
+                                                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                                                            <horstretch>0</horstretch>
+                                                            <verstretch>0</verstretch>
+                                                        </sizepolicy>
+                                                    </property>
+                                                    <property name="styleSheet">
+                                                        <string notr="true">QLabel{
+                                                            font: 700 14pt ;
+                                                            color: rgb(65, 81, 99);
+                                                            background-color:rgb(190, 203, 218);
+                                                            border: 1px solid rgb(65, 81, 99);
+                                                            border-radius: 1px;
+                                                            }
+                                                        </string>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>X</string>
+                                                    </property>
+                                                </widget>
+                                            </item>
+                                            <item>
+                                                <widget class="QDoubleSpinBox" name="SpinBoxX"/>
+                                            </item>
+                                        </layout>
+                                    </item>
+                                    <item>
+                                        <layout class="QHBoxLayout" name="MovingY">
+                                            <item>
+                                                <widget class="QLabel" name="LabelY">
+                                                    <property name="sizePolicy">
+                                                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                                                            <horstretch>0</horstretch>
+                                                            <verstretch>0</verstretch>
+                                                        </sizepolicy>
+                                                    </property>
+                                                    <property name="styleSheet">
+                                                        <string notr="true">QLabel{
+                                                            font: 700 14pt ;
+                                                            color: rgb(65, 81, 99);
+                                                            background-color:rgb(190, 203, 218);
+                                                            border: 1px solid rgb(65, 81, 99);
+                                                            border-radius: 1px;
+                                                            }
+                                                        </string>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>Y</string>
+                                                    </property>
+                                                </widget>
+                                            </item>
+                                            <item>
+                                                <widget class="QDoubleSpinBox" name="SpinBoxY"/>
+                                            </item>
+                                        </layout>
+                                    </item>
+                                    <item>
+                                        <layout class="QHBoxLayout" name="MovingZ">
+                                            <item>
+                                                <widget class="QLabel" name="LabelZ">
+                                                    <property name="sizePolicy">
+                                                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                                                            <horstretch>0</horstretch>
+                                                            <verstretch>0</verstretch>
+                                                        </sizepolicy>
+                                                    </property>
+                                                    <property name="styleSheet">
+                                                        <string notr="true">QLabel{
+                                                            font: 700 14pt ;
+                                                            color: rgb(65, 81, 99);
+                                                            background-color:rgb(190, 203, 218);
+                                                            border: 1px solid rgb(65, 81, 99);
+                                                            border-radius: 1px;
+                                                            }
+                                                        </string>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>Z</string>
+                                                    </property>
+                                                </widget>
+                                            </item>
+                                            <item>
+                                                <widget class="QDoubleSpinBox" name="SpinBoxZ"/>
+                                            </item>
+                                        </layout>
+                                    </item>
+                                </layout>
+                            </item>
+                            <item>
+                                <spacer name="verticalSpacer_2">
+                                    <property name="orientation">
+                                        <enum>Qt::Orientation::Vertical</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                        <size>
+                                            <width>20</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </item>
+                            <item>
+                                <widget class="QLabel" name="LabelScale">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>SCALE</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QSlider" name="SliderScale">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Qt::Orientation::Horizontal</enum>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item>
+                                <spacer name="verticalSpacer_3">
+                                    <property name="orientation">
+                                        <enum>Qt::Orientation::Vertical</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                        <size>
+                                            <width>20</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </item>
+                            <item>
+                                <widget class="QLabel" name="LabelProection">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>PROECTION</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QWidget" name="verticalWidget_3" native="true">
+                                    <layout class="QVBoxLayout" name="verticalLayout_9">
+                                        <item>
+                                            <widget class="QRadioButton" name="CentralProjection">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>central</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QRadioButton" name="ParallelProjection">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>parallel</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="PushButtonBgColor">
+                                    <property name="text">
+                                        <string>background color</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="Sbros">
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton{
+                                            font: 700 24pt ;
+                                            color: rgb(65, 81, 99);
+                                            display: inline-block;
+                                            background-color:rgb(213, 229, 228);
+                                            border: 3px solid rgb(65, 81, 99);
+                                            border-radius: 10px;
+                                            cursor: pointer;
+                                            }
+                                            QPushButton:hover{
+                                            background-color:rgb(173, 185, 198);
+                                            }
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string>СБРОС</string>
+                                    </property>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                </item>
+                <item row="0" column="0" rowspan="2">
+                    <widget class="GLWidget" name="openGLWidget">
+                        <property name="enabled">
+                            <bool>true</bool>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>400</width>
+                                <height>400</height>
+                            </size>
+                        </property>
+                        <property name="sizeIncrement">
+                            <size>
+                                <width>10</width>
+                                <height>10</height>
+                            </size>
+                        </property>
+                    </widget>
+                </item>
+                <item row="3" column="0">
+                    <widget class="QWidget" name="Menu" native="true">
+                        <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">QWidget{
+                                background-color: rgb(210, 191, 158);
+                                border-radius: 3px;
+                                }
+                                QPushButton{
+                                font: 700 17pt ;
+                                color: rgb(65, 81, 99);
+                                display: inline-block;
+                                background-color:rgb(213, 229, 228);
+                                border: 3px solid rgb(65, 81, 99);
+                                border-radius: 10px;
+                                cursor: pointer;
+                                }
+                                QPushButton:hover{
+                                background-color:rgb(173, 185, 198);
+                                }
+
+                                QLabel{
+                                font: 700 18pt ;
+                                color:rgb(64, 80, 98);
+                                background-color:rgb(164, 151, 132);
+                                border: 1px solid rgb(65, 81, 99);
+                                border-radius: 2px;
+                                }
+
+                                QDoubleSpinBox{
+                                color:rgb(66, 82, 100);
+                                border: 1px solid rgb(65, 81, 99);
+                                background-color:rgb(243, 220, 178);
+                                }
+
+                                QRadioButton::indicator {
+                                width: 13px;
+                                height: 13px;
+                                border-radius: 6px;
+                                }
+
+                                QRadioButton::indicator::unchecked {
+                                background-color: rgb(213, 229, 228);
+                                }
+
+                                QRadioButton::indicator:unchecked:hover {
+                                background-color: rgb(123, 155, 191);
+                                }
+
+                                QRadioButton::indicator::checked {
+                                background-color: rgb(65, 81, 99);
+                                }
+
+                                QSlider::groove:horizontal {
+                                border: 1px solid #999999;
+                                height: 8px;
+                                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+                                margin: 2px 0;
+                                }
+
+                                QSlider::handle:horizontal {
+                                background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+                                border: 1px solid #5c5c5c;
+                                width: 18px;
+                                margin: -2px 0;
+                                border-radius: 3px;
+                                }
+                                QSlider::handle:horizontal:hover {
+                                background: rgb(101, 127, 156);
+                                }
+
+                                QSlider::groove:vertical {
+                                border: 1px solid #999999;
+                                width: 8px;
+                                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+                                margin: 2px 0;
+                                }
+
+                                QSlider::handle:vertical {
+                                background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+                                border: 1px solid #5c5c5c;
+                                height: 18px;
+                                margin: 0px -2px;
+                                border-radius: 3px;
+                                }
+
+                                QSlider::handle:vertical:hover {
+                                background: rgb(101, 127, 156);
+                                }
+                            </string>
+                        </property>
+                        <layout class="QGridLayout" name="gridLayout_4">
+                            <item row="2" column="0">
+                                <widget class="QWidget" name="VertexForm" native="true">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QRadioButton::indicator {
+                                            width: 13px;
+                                            height: 13px;
+                                            border-radius: 6px;
+                                            border: 5px solid: rgb(246, 255, 170);
+                                            }
+
+                                            QRadioButton::indicator::unchecked {
+                                            background-color: rgb(213, 229, 228);
+                                            border: 3px solid: rgb(65, 81, 99);
+                                            }
+
+                                            QRadioButton::indicator:unchecked:hover {
+                                            background-color: rgb(123, 155, 191);
+                                            border: 3px solid: rgb(65, 81, 99);
+                                            }
+
+                                            QRadioButton::indicator::checked {
+                                            background-color: rgb(65, 81, 99);
+                                            border: 3px solid: rgb(65, 81, 99);
+                                            }
+                                        </string>
+                                    </property>
+                                    <layout class="QVBoxLayout" name="verticalLayout_7">
+                                        <item>
+                                            <widget class="QRadioButton" name="NoForm">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>✕</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QRadioButton" name="SquareForm">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>█</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QRadioButton" name="CircleForm">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>⬤</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </widget>
+                            </item>
+                            <item row="1" column="1">
+                                <widget class="QLabel" name="LabelEdge">
+                                    <property name="text">
+                                        <string>EDGE</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="2" column="1">
+                                <widget class="QWidget" name="EdgeForm" native="true">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true"/>
+                                    </property>
+                                    <layout class="QVBoxLayout" name="verticalLayout_8">
+                                        <item>
+                                            <widget class="QRadioButton" name="Line">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>━━━━━━━</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QRadioButton" name="DottedLine">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>┅┅┅┅┅┅┅</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </widget>
+                            </item>
+                            <item row="3" column="0">
+                                <widget class="QSlider" name="SliderVertex">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true"/>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Qt::Orientation::Horizontal</enum>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="3" column="1">
+                                <widget class="QSlider" name="SliderEdge">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Qt::Orientation::Horizontal</enum>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="5" column="1">
+                                <widget class="QPushButton" name="PushButtonEdgeColor">
+                                    <property name="styleSheet">
+                                        <string notr="true"/>
+                                    </property>
+                                    <property name="text">
+                                        <string>edge color</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="5" column="0">
+                                <widget class="QPushButton" name="PushButtonVertexColor">
+                                    <property name="text">
+                                        <string>vertex color</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="1" column="0">
+                                <widget class="QLabel" name="LabelVertex">
+                                    <property name="text">
+                                        <string>VERTEX</string>
+                                    </property>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                </item>
+                <item row="2" column="0">
+                    <widget class="QPushButton" name="PushButtonGif">
+                        <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="text">
+                            <string>MAKE GIF</string>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </widget>
+    <customwidgets>
+        <customwidget>
+            <class>GLWidget</class>
+            <extends>QOpenGLWidget</extends>
+            <header>gl_widget.h</header>
+        </customwidget>
+    </customwidgets>
+    <resources/>
+    <connections/>
+</ui>
